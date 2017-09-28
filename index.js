@@ -14,7 +14,7 @@ var options = {
     useMongoClient: true
 };
 
-var mongodbUri = 'mongodb://scitechuser:scitech2017@ds119533.mlab.com:19533/heroku_q6vt1794';
+var mongodbUri = 'mongodb://scitechuser:scitech2017@ds151024.mlab.com:51024/heroku_8x24w9z4';
 
 mongoose.connect(mongodbUri, options);
 var conn = mongoose.connection;
