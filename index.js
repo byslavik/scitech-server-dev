@@ -338,6 +338,20 @@ router.route('/persons')
             })
             .sort({"creationDate": 1});
     });
+router.route('/companies')
+    .get(function(req, res) {
+
+        People.find({"type" : {$in: ["Fund", "Accelerator", "Business"]}},
+            function(err, person) {
+                if (err){
+                    res.send(err);
+                }
+                // res.send(Person);
+                res.json(person);
+            })
+            .sort({"creationDate": 1});
+    });
+    
 router.route('/persons/add')
         .post(function(req, res) {
           let item = req.body;
